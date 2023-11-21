@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabal Online</title>
+
+    <link rel="stylesheet" type="text/css" href="C:\Users\PC-11\Desktop\responsive\js\skitter.styles.css">
+    <link rel="icon" type="image/x-icon" href="C:\Users\PC-11\Desktop\responsive\images\logo23.png">
+
+    <script src="C:\Users\PC-11\Desktop\responsive\js\jquery-1.6.3.min.js"></script>
+    <script src="C:\Users\PC-11\Desktop\responsive\js\jquery.easing.1.3.js"></script>
+    <script src="C:\Users\PC-11\Desktop\responsive\js\jquery.animate-colors-min.js"></script>
+    <script src="C:\Users\PC-11\Desktop\responsive\js\jquery.skitter.min.js"></script>
+    <script src="C:\Users\PC-11\Desktop\responsive\js\highlight.js"></script>
+
+   <script>
+    function submitForm(event) {
+        event.preventDefault(); // Prevent the form from redirecting
+
+        // Get form data
+        var fullName = document.getElementById("fullName").value;
+        var email = document.getElementById("email").value;
+        var birthday = document.getElementById("birthday").value;
+        var server = document.getElementById("server").value;
+        var userClass = document.getElementById("class").value;
+        var additionalFeedback = document.getElementById("additionalFeedback").value;
+
+        // Create a table with the form data
+        var feedbackTable =
+            "<table border='1'>" +
+            "<tr><th>Field</th><th>Value</th></tr>" +
+            "<tr><td>Full Name</td><td>" + fullName + "</td></tr>" +
+            "<tr><td>Email</td><td>" + email + "</td></tr>" +
+            "<tr><td>Birthday</td><td>" + birthday + "</td></tr>" +
+            "<tr><td>Server</td><td>" + server + "</td></tr>" +
+            "<tr><td>Class</td><td>" + userClass + "</td></tr>" +
+            "<tr><td>Message</td><td>" + additionalFeedback + "</td></tr>" +
+            "</table>";
+
+        // Display the table in the designated div
+        document.getElementById("feedbackDisplay").innerHTML += feedbackTable;
+    }
+</script>
+
+    <script>
+        $(document).ready(function () {
+            var options = {};
+            if (document.location.search) {
+                var array = document.location.search.split('=');
+                var param = array[0].replace('?', '');
+                var value = array[1];
+
+                if (param == 'animation') {
+                    options.animation = value;
+                } else if (param == 'type_navigation') {
+                    if (value == 'dots_preview') {
+                        $('.border_box').css({ 'marginBottom': '40px' });
+                        options['dots'] = true;
+                        options['preview'] = true
+                    } else {
+                        options[value] = true;
+                        if (value == 'dots') $('.border_box').css({ 'marginBottom': '40px' });
+                    }
+                }
+            }
+            $('.box_skitter_large').skitter(options);
+
+            $('pre.code').highlight({ source: 1, zebra: 1, indent: 'space', list: 'ol' });
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(C:/Users/PC-11/Desktop/responsive/images/c23.jpg); /* Adjust the path if needed */
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .midboxcon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex: 1; /* Allows the content to take up remaining vertical space */
+        }
+
+        header {
+            background-color: black;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .text {
+            border: 1px solid white;
+            margin: 10px;
+            padding-bottom: 10px;
+            color: white;
+            flex: 1;
+            font-size: 30px;
+        }
+
+        h1 {
+            color: white;
+            font-weight: 800
+            font-size: 500px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            background-image: url("C:/Users/PC-11/Desktop/responsive/images/c23.jpg");
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .classes {
+  margin:0 auto;
+  width: 500px;
+  height: 1463px;
+  background-color: purple;
+}
+.classes th, tr, td {
+border: 1px solid white;
+border-collapse: collapse;
+padding: 30px;
+font-weight: bold;
+background-image: url("C:/Users/Dion/Desktop/responsive/images/R.jpg");
+background-size: 100% 100%;
+color: white;
+align-items: center;
+}
+
+.feedback-container {
+            margin-top: -100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .feedback-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+#feedbackDisplay {
+    display: flex;
+    flex-direction: column-reverse; /* Stack items vertically */
+    align-items: center; /* Center the items horizontally */
+    margin-top: 20px; /* Add some top margin for spacing */
+    margin-right: 20px;
+}
+
+.feedback-item {
+    width: 300px; /* Adjust the width as needed */
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px 20px; /* Add margin to the top and bottom for spacing between items */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            nav ul {
+                list-style: none;
+                display: flex;
+                margin-left: 90px;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .midboxcon {
+                margin-top: 20px;
+            }
+
+            .midbox1,
+            .midbox2,
+            .midbox3 {
+                margin-left: 0;
+            }
+
+.feedback-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .feedback-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+#feedbackDisplay {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the items horizontally */
+    margin-top: 20px; /* Add some top margin for spacing */
+}
+
+.feedback-item {
+    width: 300px; /* Adjust the width as needed */
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px 0; /* Add margin to the top and bottom for spacing between items */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+        
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:\Users\PC-11\Desktop\responsive\images\br.png" alt="Cabal Online Logo" width="380" height="100">
+        </div>
+        <nav>
+            <ul>
+               <li><a href="index.html">Home</a></li>
+                <li><a href="aboutthegame.html">About the Game</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="recharge.html">Recharge</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <h1 align="center" style="font-size: 80px">We value your feedback, Cabalist!</h1>  
+
+          <div class="feedback-container">
+        <div class="feedback-box">
+            <h2>Feedback Submission</h2>
+
+            <form onsubmit="submitForm(event)">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday" required>
+
+                <label for="server">Server:</label>
+                <select id="server" name="server">
+                    <option value="Andromeda">Andromeda</option>
+                    <option value="Perseus">Perseus</option>
+                </select>
+
+                <label for="class">Class:</label>
+                <select id="class" name="class">
+                    <option value="Warrior">Warrior</option>
+                    <option value="Blader">Blader</option>
+                    <option value="Force Shielder">Force Shielder</option>
+                    <option value="Force Blader">Force Blader</option>
+                    <option value="Force Archer">Force Archer</option>
+                    <option value="Wizard">Wizard</option>
+                    <option value="Force Gunner">Force Gunner</option>
+                    <option value="Gladiator">Gladiator</option>
+                </select>
+
+                <label for="additionalFeedback">Message:</label>
+                <textarea id="additionalFeedback" name="additionalFeedback" rows="4" required></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+               <div id="feedbackDisplay">
+    <table border="10">
+    </table>
+</div>
+
+                     
+<div class="footer">
+        <p>&copy; 2023 Cabal Online | <a href="#">D I O N</a> | <a href="#">For school project purposes only</a></p>
+    </div>
+
+</body>
+
+</html>

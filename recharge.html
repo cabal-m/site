@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabal Online</title>
+
+    <link rel="stylesheet" type="text/css" href="C:\Users\Dion\Desktop\responsive\js\skitter.styles.css">
+    <link rel="icon" type="image/x-icon" href="C:\Users\Dion\Desktop\responsive\images\logo23.png">
+
+    <script src="C:\Users\Dion\Desktop\responsive\js\jquery-1.6.3.min.js"></script>
+    <script src="C:\Users\Dion\Desktop\responsive\js\jquery.easing.1.3.js"></script>
+    <script src="C:\Users\Dion\Desktop\responsive\js\jquery.animate-colors-min.js"></script>
+    <script src="C:\Users\Dion\Desktop\responsive\js\jquery.skitter.min.js"></script>
+    <script src="C:\Users\Dion\Desktop\responsive\js\highlight.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var options = {};
+            if (document.location.search) {
+                var array = document.location.search.split('=');
+                var param = array[0].replace('?', '');
+                var value = array[1];
+
+                if (param == 'animation') {
+                    options.animation = value;
+                } else if (param == 'type_navigation') {
+                    if (value == 'dots_preview') {
+                        $('.border_box').css({ 'marginBottom': '40px' });
+                        options['dots'] = true;
+                        options['preview'] = true
+                    } else {
+                        options[value] = true;
+                        if (value == 'dots') $('.border_box').css({ 'marginBottom': '40px' });
+                    }
+                }
+            }
+            $('.box_skitter_large').skitter(options);
+
+            $('pre.code').highlight({ source: 1, zebra: 1, indent: 'space', list: 'ol' });
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/c23.jpg'); /* Adjust the path if needed */
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .midboxcon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex: 1; /* Allows the content to take up remaining vertical space */
+        }
+
+        header {
+            background-color: black;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .text {
+            border: 1px solid white;
+            margin: 10px;
+            padding-bottom: 10px;
+            color: white;
+            flex: 1;
+            font-size: 30px;
+        }
+
+        h1 {
+            border-style: 2px dashed white;
+            color: white;
+            font-weight: 800;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            background-image: url("C:/Users/Dion/Desktop/responsive/images/c23.jpg");
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .classes {
+  margin:0 auto;
+  width: 500px;
+  height: 1463px;
+  background-color: purple;
+}
+.classes th, tr, td {
+border: 1px solid white;
+border-collapse: collapse;
+padding: 30px;
+font-weight: bold;
+background-image: url("C:/Users/Dion/Desktop/responsive/images/R.jpg");
+background-size: 100% 100%;
+color: white;
+}
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            nav ul {
+                list-style: none;
+                display: flex;
+                margin-left: 90px;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .midboxcon {
+                margin-top: 20px;
+            }
+
+            .midbox1,
+            .midbox2,
+            .midbox3 {
+                margin-left: 0;
+            }
+
+            .classes {
+  margin:0 auto;
+  width: 500px;
+  height: 1463px;
+  background-color: gray;
+  background-image: url("C:/Users/Dion/Desktop/responsive/images/tablebg.jpg");
+}
+.classes th, tr, td {
+border: 1px solid black;
+border-collapse: collapse;
+padding: 30px;
+font-weight: bold;
+background-image: url("C:/Users/Dion/Desktop/responsive/images/br.png");
+background-size: 80% 80%;
+color: white;
+}
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:\Users\Dion\Desktop\responsive\images\br.png" alt="Cabal Online Logo" width="380" height="100">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutthegame.html">About the Game</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="recharge.html">Recharge</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="classes">
+                    <table>
+                        <tr>
+                            <td>Forcegem pack</td>
+                            <td>Price (PHP)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src = "images/fg.png" alt ="" width = "80" height = "70" align="center"/><br>60 + 36 Forcegems pack</br></td>
+                            <td>50 PHP</td>
+                            <td><button onclick="window.location.href='https://www.codashop.com/en-ph/cabal-m-heroes-of-nevareth';">BUY NOW</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src = "images/fg.png" alt ="" width = "80" height = "70" align="center"/><br>120 + 48 Forcegems pack</br></td>
+                            <td>100 PHP</td>
+                            <td><button onclick="window.location.href='https://www.codashop.com/en-ph/cabal-m-heroes-of-nevareth';">BUY NOW</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src = "images/fg.png" alt ="" width = "80" height = "70" align="center"/><br>250 + 50 Forcegems pack</br></td>
+                            <td>260 PHP</td>
+                            <td><button onclick="window.location.href='https://www.codashop.com/en-ph/cabal-m-heroes-of-nevareth';">BUY NOW</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src = "images/fg.png" alt ="" width = "80" height = "70" align="center"/><br>600 + 58 Forcegems pack</br></td>
+                            <td>520 PHP</td>
+                            <td><button onclick="window.location.href='https://www.codashop.com/en-ph/cabal-m-heroes-of-nevareth';">BUY NOW</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src = "images/fg.png" alt ="" width = "80" height = "70" align="center"/><br>1000 + 66 Forcegems pack</br></td>
+                            <td>1,040 PHP</td>
+                            <td><button onclick="window.location.href='https://www.codashop.com/en-ph/cabal-m-heroes-of-nevareth';">BUY NOW</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src = "images/fg.png" alt ="" width = "80" height = "70" align="center"/><br>2500 + 150 Forcegems pack</br></td>
+                            <td>2,020 PHP</td>
+                            <td><button onclick="window.location.href='https://www.codashop.com/en-ph/cabal-m-heroes-of-nevareth';">BUY NOW</button></td>
+                        </tr>
+                         <tr>
+                            <td><img src = "images/fg.png" alt ="" width = "80" height = "70" align="center"/><br>3500 + 210 Forcegems pack</br></td>
+                            <td>3,000 PHP</td>
+                            <td><button onclick="window.location.href='https://www.codashop.com/en-ph/cabal-m-heroes-of-nevareth';">BUY NOW</button></td>
+                        </tr>
+                         <tr>
+                            <td><img src = "images/fg.png" alt ="" width = "80" height = "70" align="center"/><br>4500 + 262 Forcegems pack</br></td>
+                            <td>4,800 PHP</td>
+                            <td><button onclick="window.location.href='https://www.codashop.com/en-ph/cabal-m-heroes-of-nevareth';">BUY NOW</button></td>
+                        </tr>
+                    </table>
+                </div>     
+                     
+<div class="footer">
+        <p>&copy; 2023 Cabal Online | <a href="#">D I O N</a> | <a href="#">For school project purposes only</a></p>
+    </div>
+
+</body>
+
+</html>

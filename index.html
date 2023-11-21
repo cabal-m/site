@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabal Online | PH</title>
+    <link rel="stylesheet" type="text/css" href="C:\Users\PC-11\Desktop\responsive\js\skitter.styles.css">
+    <link rel="icon" type="image/x-icon" href="C:\Users\PC-11\Desktop\responsive\images\logo23.png">
+
+    <script src="C:\Users\PC-11\Desktop\responsive\js\jquery-1.6.3.min.js"></script>
+    <script src="C:\Users\PC-11\Desktop\responsive\js\jquery.easing.1.3.js"></script>
+    <script src="C:\Users\PC-11\Desktop\responsive\js\jquery.animate-colors-min.js"></script>
+    <script src="C:\Users\PC-11\Desktop\responsive\js\jquery.skitter.min.js"></script>
+    <script src="C:\Users\PC-11\Desktop\responsive\js\highlight.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var options = {};
+            if (document.location.search) {
+                var array = document.location.search.split('=');
+                var param = array[0].replace('?', '');
+                var value = array[1];
+
+                if (param == 'animation') {
+                    options.animation = value;
+                } else if (param == 'type_navigation') {
+                    if (value == 'dots_preview') {
+                        $('.border_box').css({ 'marginBottom': '40px' });
+                        options['dots'] = true;
+                        options['preview'] = true
+                    } else {
+                        options[value] = true;
+                        if (value == 'dots') $('.border_box').css({ 'marginBottom': '40px' });
+                    }
+                }
+            }
+            $('.box_skitter_large').skitter(options);
+
+            $('pre.code').highlight({ source: 1, zebra: 1, indent: 'space', list: 'ol' });
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('C:/Users/PC-11/Desktop/responsive/images/c23.jpg');
+            background-size: cover;   
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .midboxcon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+        
+        }
+
+        header {
+            background-color: black;
+            padding: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            height: 350px;
+            width: 100%; 
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .text {
+            border: 1px solid white;
+            margin: 10px;
+            padding-bottom: 10px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .content {
+            flex: 1; /* Allows the content to take up remaining vertical space */
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            background-image: url("C:/Users/PC-11/Desktop/responsive/images/c23.jpg");
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                object-fit: cover;
+                width: 100%;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            nav ul {
+                list-style: none;
+                display: flex;
+                margin-left: 90px;
+                align-items: center;
+                float: left;
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                font-weight: 700;
+            }
+
+            .midboxcon {
+                margin-top: 20px;
+            }
+
+            .midbox1,
+            .midbox2,
+            .midbox3 {
+                margin-left: 0;
+            }
+
+            .content {
+            flex: 1; /* Allows the content to take up remaining vertical space */
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:\Users\PC-11\Desktop\responsive\images\br.png" alt="Cabal Online Logo" width="380" height="100">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutthegame.html">About the Game</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="recharge.html">Recharge</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="midboxcon">
+        <div class="midbox1">
+            <img src="C:\Users\PC-11\Desktop\responsive\images\mbimg1.jpg" alt="" width="333" height="260" align="justify-content" />
+        </div>
+        <div class="text">
+            <p><b>"Cabal Online" is a free-to-play 3D fantasy massively multiplayer online role-playing game (MMORPG) developed and published by ESTsoft. The game was first released in South Korea in 2005 and has since gained popularity in various regions around the world.</p></b>
+        </div>
+        <div class="midbox2">
+            <img src="C:\Users\PC-11\Desktop\responsive\images\mbimg2.jpg" alt="" width="333" height="250" />
+        </div>
+        <div class="text">
+            <p><b> "Cabal Online" is set in the fictional world of Nevareth, a land that was once prosperous but has been devastated by the forces of evil. Players embark on a journey to combat the sinister Cabal, a group of beings seeking to destroy the world.</p></b>
+        </div>
+        <div class="midbox3">
+            <img src="C:\Users\PC-11\Desktop\responsive\images\mbimg3.jpg" alt="" width="333" height="250" />
+        </div>
+        <div class="text">
+            <p><b>The game features various character classes, each with unique abilities and playstyles. Examples of classes include Warrior, Wizard, Force Blader, and Force Archer. Players can choose a class that suits their preferred combat style and role in the game.</p></b>
+        </div>
+    </div>
+ 
+<div class="footer">
+        <p>&copy; 2023 Cabal Online | <a href="#">D I O N</a> | <a href="#">For school project purposes only</a></p>
+    </div>
+
+</body>
+
+</html>
